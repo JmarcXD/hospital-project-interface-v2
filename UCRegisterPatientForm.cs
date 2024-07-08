@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace hospital_project_interface_v2
@@ -16,10 +17,16 @@ namespace hospital_project_interface_v2
         {
             if (this.hospital != null)
             {
+                List<ComboBoxItem> doctorsItems = new List<ComboBoxItem>();
+
                 foreach (Doctor d in this.hospital.ListDoctors)
                 {
-                    this.listDoctorsCB.Items.Add(d.Identification);
+                    doctorsItems.Add(new ComboBoxItem(d.Identification, $"{d.Name} {d.LastName}"));
                 }
+
+                this.listDoctorsCB.DataSource = doctorsItems;
+                this.listDoctorsCB.DisplayMember = "Text";
+                this.listDoctorsCB.ValueMember = "Value";
             }
         }
 
@@ -35,16 +42,23 @@ namespace hospital_project_interface_v2
                 MessageBox.Show("Selecciona al Médico");
             else
             {
-                Doctor doctorAssigned = this.hospital.ListDoctors.Find(d => d.Identification == this.listDoctorsCB.Text);
+                ComboBoxItem doctorSelected = (ComboBoxItem)this.listDoctorsCB.SelectedItem;
+
+                Doctor doctorAssigned = this.hospital.ListDoctors.Find(d => d.Identification == doctorSelected.Value);
                 this.hospital.RegisterAPatient(new Patient(doctorAssigned,
                                                            this.patientIdentificationTB.Text,
                                                            this.patientNameTB.Text,
                                                            this.patientLastNameTB.Text,
                                                            (int)this.patientAgeUD.Value));
                 MessageBox.Show("Se ha registrado correctamente");
+                this.Visible = false;
             }
 
         }
 
+        private void closeWindowButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

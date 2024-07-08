@@ -40,33 +40,37 @@
             this.patientIdentificationTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.closeWindowButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.patientAgeUD)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 397);
+            this.label6.Location = new System.Drawing.Point(28, 206);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 25);
+            this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 43;
             this.label6.Text = "Médico Asignado";
             // 
             // listDoctorsCB
             // 
             this.listDoctorsCB.FormattingEnabled = true;
-            this.listDoctorsCB.Location = new System.Drawing.Point(62, 425);
+            this.listDoctorsCB.Location = new System.Drawing.Point(31, 221);
+            this.listDoctorsCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listDoctorsCB.Name = "listDoctorsCB";
-            this.listDoctorsCB.Size = new System.Drawing.Size(282, 33);
+            this.listDoctorsCB.Size = new System.Drawing.Size(143, 21);
             this.listDoctorsCB.TabIndex = 42;
             // 
             // registerNewDoctor
             // 
             this.registerNewDoctor.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.registerNewDoctor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.registerNewDoctor.Location = new System.Drawing.Point(64, 517);
+            this.registerNewDoctor.Location = new System.Drawing.Point(32, 269);
+            this.registerNewDoctor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.registerNewDoctor.Name = "registerNewDoctor";
-            this.registerNewDoctor.Size = new System.Drawing.Size(193, 77);
+            this.registerNewDoctor.Size = new System.Drawing.Size(96, 40);
             this.registerNewDoctor.TabIndex = 41;
             this.registerNewDoctor.Text = "Registrar";
             this.registerNewDoctor.UseVisualStyleBackColor = false;
@@ -75,22 +79,24 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(518, 282);
+            this.label5.Location = new System.Drawing.Point(259, 147);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 25);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 40;
             this.label5.Text = "Edad";
             // 
             // patientAgeUD
             // 
-            this.patientAgeUD.Location = new System.Drawing.Point(523, 310);
+            this.patientAgeUD.Location = new System.Drawing.Point(262, 161);
+            this.patientAgeUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.patientAgeUD.Minimum = new decimal(new int[] {
             18,
             0,
             0,
             0});
             this.patientAgeUD.Name = "patientAgeUD";
-            this.patientAgeUD.Size = new System.Drawing.Size(286, 31);
+            this.patientAgeUD.Size = new System.Drawing.Size(143, 20);
             this.patientAgeUD.TabIndex = 39;
             this.patientAgeUD.Value = new decimal(new int[] {
             18,
@@ -100,49 +106,55 @@
             // 
             // patientLastNameTB
             // 
-            this.patientLastNameTB.Location = new System.Drawing.Point(64, 310);
+            this.patientLastNameTB.Location = new System.Drawing.Point(32, 161);
+            this.patientLastNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.patientLastNameTB.Name = "patientLastNameTB";
-            this.patientLastNameTB.Size = new System.Drawing.Size(286, 31);
+            this.patientLastNameTB.Size = new System.Drawing.Size(145, 20);
             this.patientLastNameTB.TabIndex = 38;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 282);
+            this.label4.Location = new System.Drawing.Point(36, 147);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 25);
+            this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 37;
             this.label4.Text = "Apellido";
             // 
             // patientNameTB
             // 
-            this.patientNameTB.Location = new System.Drawing.Point(523, 184);
+            this.patientNameTB.Location = new System.Drawing.Point(262, 96);
+            this.patientNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.patientNameTB.Name = "patientNameTB";
-            this.patientNameTB.Size = new System.Drawing.Size(286, 31);
+            this.patientNameTB.Size = new System.Drawing.Size(145, 20);
             this.patientNameTB.TabIndex = 36;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(518, 155);
+            this.label3.Location = new System.Drawing.Point(259, 81);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 25);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 35;
             this.label3.Text = "Nombre";
             // 
             // patientIdentificationTB
             // 
-            this.patientIdentificationTB.Location = new System.Drawing.Point(64, 184);
+            this.patientIdentificationTB.Location = new System.Drawing.Point(32, 96);
+            this.patientIdentificationTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.patientIdentificationTB.Name = "patientIdentificationTB";
-            this.patientIdentificationTB.Size = new System.Drawing.Size(286, 31);
+            this.patientIdentificationTB.Size = new System.Drawing.Size(145, 20);
             this.patientIdentificationTB.TabIndex = 34;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 155);
+            this.label2.Location = new System.Drawing.Point(30, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 25);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 33;
             this.label2.Text = "Identificación";
             // 
@@ -150,16 +162,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 54);
+            this.label1.Location = new System.Drawing.Point(23, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 51);
+            this.label1.Size = new System.Drawing.Size(166, 26);
             this.label1.TabIndex = 32;
             this.label1.Text = "Nuevo Paciente";
             // 
+            // closeWindowButton
+            // 
+            this.closeWindowButton.BackColor = System.Drawing.Color.Red;
+            this.closeWindowButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.closeWindowButton.Location = new System.Drawing.Point(388, 28);
+            this.closeWindowButton.Margin = new System.Windows.Forms.Padding(2);
+            this.closeWindowButton.Name = "closeWindowButton";
+            this.closeWindowButton.Size = new System.Drawing.Size(19, 20);
+            this.closeWindowButton.TabIndex = 44;
+            this.closeWindowButton.Text = "X";
+            this.closeWindowButton.UseVisualStyleBackColor = false;
+            this.closeWindowButton.Click += new System.EventHandler(this.closeWindowButton_Click);
+            // 
             // UCRegisterPatientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.closeWindowButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.listDoctorsCB);
             this.Controls.Add(this.registerNewDoctor);
@@ -172,8 +199,9 @@
             this.Controls.Add(this.patientIdentificationTB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UCRegisterPatientForm";
-            this.Size = new System.Drawing.Size(922, 746);
+            this.Size = new System.Drawing.Size(461, 388);
             ((System.ComponentModel.ISupportInitialize)(this.patientAgeUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,5 +222,6 @@
         private System.Windows.Forms.TextBox patientIdentificationTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button closeWindowButton;
     }
 }

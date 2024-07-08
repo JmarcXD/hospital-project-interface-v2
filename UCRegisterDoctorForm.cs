@@ -26,7 +26,13 @@ namespace hospital_project_interface_v2
                                                          this.doctorLastNameTB.Text,
                                                          ((int)this.doctorAgeUD.Value)));
                 MessageBox.Show("Se ha registrado correctamente");
+                this.Visible = false;
             }
+        }
+
+        private void closeWindowButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }

@@ -36,5 +36,10 @@ namespace hospital_project_interface_v2
                 }
             }
         }
+
+        private void closeWindowButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace hospital_project_interface_v2
@@ -16,10 +17,15 @@ namespace hospital_project_interface_v2
         {
             if (this.hospital != null)
             {
+                List<ComboBoxItem> patiensItems = new List<ComboBoxItem>();
                 foreach (Patient d in this.hospital.ListPatients)
                 {
-                    this.listPatientsCB.Items.Add(d.Identification);
+                    patiensItems.Add(new ComboBoxItem(d.Identification, $"{d.Name} {d.LastName}"));
                 }
+
+                this.listPatientsCB.DataSource = patiensItems;
+                this.listPatientsCB.DisplayMember = "Text";
+                this.listPatientsCB.ValueMember = "Value";
             }
         }
 
@@ -27,11 +33,20 @@ namespace hospital_project_interface_v2
         {
             if (this.listPatientsCB.Text != "")
             {
-                Patient patientToDelete = this.hospital.ListPatients.Find(p => p.Identification == this.listPatientsCB.Text);
+                ComboBoxItem patientSelected = (ComboBoxItem)this.listPatientsCB.SelectedItem;
+
+                Patient patientToDelete = this.hospital.ListPatients
+                    .Find(p => p.Identification == patientSelected.Value);
+
                 this.hospital.DeleteAPatientByObject(patientToDelete);
                 MessageBox.Show("Se ha eliminado correctamente");
-                this.listPatientsCB.Items.Clear();
+                this.Visible = false;
             }
+        }
+
+        private void closeWindowButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }
