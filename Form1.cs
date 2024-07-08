@@ -72,5 +72,10 @@ namespace hospital_project_interface_v2
             HideUsersControls();
             this.ucdDeleteAPatientOfHospital1.Show();
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
